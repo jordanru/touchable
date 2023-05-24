@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:touchable/src/types/types.dart';
 
@@ -19,6 +20,8 @@ class TouchCanvasUtil {
         return (gestureDetail as TapDownDetails).localPosition;
       case TapUpDetails:
         return (gestureDetail as TapUpDetails).localPosition;
+      case GestureMultiTapDownCallback:
+        return (gestureDetail as TapDownDetails).localPosition;
       case DragDownDetails:
         return (gestureDetail as DragDownDetails).localPosition;
       case DragStartDetails:
@@ -45,6 +48,7 @@ class TouchCanvasUtil {
   static Map<GestureType, Function> getGestureCallbackMap({
     required GestureTapDownCallback? onTapDown,
     required GestureTapUpCallback? onTapUp,
+    required GestureTapDownCallback? onDoubleTapDown,
     required GestureLongPressStartCallback? onLongPressStart,
     required GestureLongPressEndCallback? onLongPressEnd,
     required GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
@@ -55,6 +59,10 @@ class TouchCanvasUtil {
     required GestureDragStartCallback? onPanStart,
     required GestureDragUpdateCallback? onPanUpdate,
     required GestureDragDownCallback? onPanDown,
+    required GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     required GestureTapDownCallback? onSecondaryTapDown,
     required GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -63,6 +71,7 @@ class TouchCanvasUtil {
       map.putIfAbsent(GestureType.onTapDown, () => onTapDown);
     }
     if (onTapUp != null) map.putIfAbsent(GestureType.onTapUp, () => onTapUp);
+    if (onDoubleTapDown != null) map.putIfAbsent(GestureType.onDoubleTapDown, () => onDoubleTapDown);
 
     if (onLongPressStart != null) {
       map.putIfAbsent(GestureType.onLongPressStart, () => onLongPressStart);
@@ -95,6 +104,20 @@ class TouchCanvasUtil {
     }
     if (onPanDown != null) {
       map.putIfAbsent(GestureType.onPanDown, () => onPanDown);
+    }
+    if (onPanEnd != null) {
+      map.putIfAbsent(GestureType.onPanEnd, () {
+        return onPanEnd;
+      });
+    }
+    if (onScaleUpdate != null) {
+      map.putIfAbsent(GestureType.onScaleUpdate, () => onScaleUpdate);
+    }
+    if (onScaleStart != null) {
+      map.putIfAbsent(GestureType.onScaleStart, () => onScaleStart);
+    }
+    if (onVerticalDragUpdate != null) {
+      map.putIfAbsent(GestureType.onVerticalDragUpdate, () => onVerticalDragUpdate);
     }
 
     if (onSecondaryTapDown != null) {

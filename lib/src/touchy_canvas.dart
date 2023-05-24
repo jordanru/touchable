@@ -64,6 +64,7 @@ class TouchyCanvas {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
     GestureTapUpCallback? onTapUp,
+    GestureTapDownCallback? onDoubleTapDown,
     GestureLongPressStartCallback? onLongPressStart,
     GestureLongPressEndCallback? onLongPressEnd,
     GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
@@ -74,6 +75,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -86,6 +91,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -96,6 +102,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -109,6 +119,7 @@ class TouchyCanvas {
     GestureTapDownCallback? onTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
+    GestureTapDownCallback? onDoubleTapDown,
     GestureLongPressStartCallback? onLongPressStart,
     GestureLongPressEndCallback? onLongPressEnd,
     GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
@@ -119,6 +130,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -129,6 +144,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -139,6 +155,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -149,6 +169,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -161,6 +182,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -171,6 +196,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -181,6 +207,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -197,6 +227,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -209,6 +240,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -219,6 +254,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -229,6 +265,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -240,6 +280,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -252,6 +293,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -262,6 +307,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -272,6 +318,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -284,6 +334,7 @@ class TouchyCanvas {
     GestureTapDownCallback? onTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
+    GestureTapDownCallback? onDoubleTapDown,
     GestureLongPressStartCallback? onLongPressStart,
     GestureLongPressEndCallback? onLongPressEnd,
     GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
@@ -294,6 +345,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -304,6 +359,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -314,6 +370,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -325,6 +385,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -337,6 +398,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -351,6 +416,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -361,6 +427,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -371,6 +441,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -383,6 +454,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -393,6 +468,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -403,6 +479,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -419,6 +499,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -431,6 +512,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -441,6 +526,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -451,6 +537,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         )));
@@ -464,6 +554,7 @@ class TouchyCanvas {
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
+    GestureTapDownCallback? onDoubleTapDown,
     PaintingStyle? paintStyleForTouch,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
@@ -476,6 +567,10 @@ class TouchyCanvas {
     GestureDragStartCallback? onPanStart,
     GestureDragUpdateCallback? onPanUpdate,
     GestureDragDownCallback? onPanDown,
+    GestureDragEndCallback? onPanEnd,
+    GestureScaleUpdateCallback? onScaleUpdate,
+    GestureScaleStartCallback? onScaleStart,
+    GestureDragUpdateCallback? onVerticalDragUpdate,
     GestureTapDownCallback? onSecondaryTapDown,
     GestureTapUpCallback? onSecondaryTapUp,
   }) {
@@ -486,6 +581,7 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onDoubleTapDown: onDoubleTapDown,
           onLongPressStart: onLongPressStart,
           onLongPressEnd: onLongPressEnd,
           onLongPressMoveUpdate: onLongPressMoveUpdate,
@@ -496,6 +592,10 @@ class TouchyCanvas {
           onPanStart: onPanStart,
           onPanUpdate: onPanUpdate,
           onPanDown: onPanDown,
+          onPanEnd: onPanEnd,
+          onScaleUpdate: onScaleUpdate,
+          onScaleStart: onScaleStart,
+          onVerticalDragUpdate: onVerticalDragUpdate,
           onSecondaryTapDown: onSecondaryTapDown,
           onSecondaryTapUp: onSecondaryTapUp,
         ));

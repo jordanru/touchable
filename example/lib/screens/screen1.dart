@@ -15,50 +15,52 @@ class _Screen1State extends State<Screen1> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Flexible(
-            child: AnimatedContainer(
-                duration: Duration(seconds: 1),
-                color: color,
-                width: 400,
-                height: 900,
-                child: CanvasTouchDetector(
-                  builder: (context) {
-                    return CustomPaint(
-                      painter: MyPainter(context, (String circleColor) {
-                        setState(() {
-                          switch (circleColor) {
-                            case 'orange':
-                              color = Colors.orange;
-                              break;
-                            case 'pink':
-                              color = Colors.pinkAccent;
-                              break;
-                            case 'green':
-                              color = Colors.green;
-                              break;
-                            case 'black':
-                              color = Colors.black;
-                              break;
-                            case 'purple':
-                              color = Colors.purple;
-                              break;
-                            case 'grey':
-                              color = Colors.grey;
-                              break;
-                            default:
-                              color = Colors.blue;
-                          }
-                        });
-                      }),
-                    );
-                  },
-                )),
-          ),
-        ],
+      child: GestureDetector(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Flexible(
+              child: AnimatedContainer(
+                  duration: Duration(seconds: 1),
+                  color: color,
+                  width: 400,
+                  height: 900,
+                  child: CanvasTouchDetector(
+                    builder: (context) {
+                      return CustomPaint(
+                        painter: MyPainter(context, (String circleColor) {
+                          setState(() {
+                            switch (circleColor) {
+                              case 'orange':
+                                color = Colors.orange;
+                                break;
+                              case 'pink':
+                                color = Colors.pinkAccent;
+                                break;
+                              case 'green':
+                                color = Colors.green;
+                                break;
+                              case 'black':
+                                color = Colors.black;
+                                break;
+                              case 'purple':
+                                color = Colors.purple;
+                                break;
+                              case 'grey':
+                                color = Colors.grey;
+                                break;
+                              default:
+                                color = Colors.blue;
+                            }
+                          });
+                        }),
+                      );
+                    },
+                  )),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -140,13 +142,18 @@ class MyPainter extends CustomPainter {
     });
 
     canvas.drawRRect(
-        RRect.fromLTRBR(100, 340, 300, 650, Radius.elliptical(100, 150)),
-        Paint()
-          ..strokeWidth = 40
-          ..color = Colors.grey, onTapDown: (_) {
-      setState('grey');
-      print("grey RRect touched");
-    });
+      RRect.fromLTRBR(100, 340, 300, 650, Radius.elliptical(100, 150)),
+      Paint()
+        ..strokeWidth = 40
+        ..color = Colors.grey,
+      onDoubleTapDown: (details) {
+        print('grey RRect double tapped');
+      },
+      onTapDown: (_) {
+        setState('grey');
+        print("grey RRect touched");
+      },
+    );
 
     canvas.drawRRect(
         RRect.fromLTRBR(100 - 20.0, 340 - 20.0, 300 + 20.0, 650 + 20.0, Radius.elliptical(100 + 20.0, 150 + 20.0)),
